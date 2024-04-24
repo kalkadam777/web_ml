@@ -1,0 +1,34 @@
+<div class="modal fade show" style="display: block;" aria-modal="true" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Create Task</h5>
+        <!-- <button type="button" class="close" (click)="closeModal()">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+      </div>
+      <div class="modal-body">
+        <form (ngSubmit)="onSubmit(taskForm)" #taskForm="ngForm">
+          <div class="form-group">
+            <label for="task_name">Task Name</label>
+            <input type="text" class="form-control" id="task_name" [(ngModel)]="newTask.name" name="task_name" required>
+          </div>
+          <div class="form-group">
+            <label for="statement">Statement</label>
+            <textarea class="form-control" id="statement" [(ngModel)]="newTask.statement" name="statement" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="points">Points</label>
+            <input type="number" class="form-control" id="points" [(ngModel)]="newTask.points" name="points" required>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="closeModal()">Cancel</button>
+            <button type="submit" class="btn btn-primary" [disabled]="!taskForm.valid">Create</button>
+          </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<div class="modal-backdrop fade show"></div>

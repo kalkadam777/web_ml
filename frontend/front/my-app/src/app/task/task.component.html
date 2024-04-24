@@ -1,0 +1,88 @@
+<main>
+    <div class="menu_side">
+        <div class="textbook_logo"> 
+            <img src="../../assets/fluent_hat.svg" alt="">
+            <div>Tasks</div>
+        </div>
+
+        <div class="btns">
+            <button class="btn2" (click)="openModal()">
+                <img class="iconka" src="../../assets/cr.svg" alt="">
+                Create
+            </button>
+            <app-create-task-modal *ngIf="showModal" (close)="closeModal()"></app-create-task-modal>
+            <div class="settings" (click)="toggleModal()"><img src="../../assets/icon_set.svg" alt=""></div>
+            <app-modal ></app-modal>
+        </div>
+    </div>
+
+    <div>
+
+    </div>
+
+    <div class="tasks">
+
+        <!-- <div class="task">
+            <div class="div1" >
+                <div class="task_title">
+                    <p class="title">Task 5.2</p>
+                    <p class="note">(1.5 points)</p>
+                </div>
+            </div>
+            <div class="desk_div">
+                <p class="desk1">Let <i>X<sub>1</sub>, ..., X<sub>n</sub></i> is an i.i.d. sample from <i>N(θ, σ<sup>2</sup>)</i> and <i>θ̂ = 1/n Σ|X<sub>i</sub>|</i>.</p>
+                <img src="../../assets/divider.svg" alt="divider">
+                <ul class="desk2">
+                    <li>Find bias, se and MSE of the estimation <i>θ̂</i>. Is this estimation unbiased? <span class="pts">(0.7 points)</span></li>
+                    <li>If <i>θ̂</i> turned out to be biased, fix it to get an unbiased estimation of <i>σ</i>. Find se of this corrected estimation. Is it consistent? Justify your answer. <span class="pts">(0.8 points)</span></li>
+                </ul>
+            </div>
+            <div class="knopky">
+                <button class="btn_update">Update</button>
+                <button class="btn_delete" >Delete</button>
+                <button class="btn_update">Comment</button>
+                <button class="btn_delete">Solution</button>
+            </div>
+        </div> -->
+
+        <div class="task" *ngFor="let task of tasks">
+            <div class="div1" >
+                <div class="task_title">
+                    <p class="title">Task {{task.id}}</p>
+                    <p class="note">({{task.points}} points)</p>
+                </div>
+            </div>
+            <div class="desk_div">
+                <p class="desk1"> {{task.name}} </p>
+                <img src="../../assets/divider.svg" alt="divider">
+                <ul class="desk2">
+                    <li>{{task.statement}}<span class="pts">({{task.points}} points)</span></li>
+                </ul>
+            </div>
+            <div class="knopky">
+                <button class="btn_update">Update</button>
+                <button class="btn_delete" (click)="deleteTask(task.id)">Delete</button>
+                <button class="btn_comment" [routerLink]="['/comments']" >Comment</button>
+                <button class="btn_solution" [routerLink]="['/solution', task.id]">Solution</button>
+            </div>
+        </div>
+
+        <ng-container *ngIf="tasks.length === 0">
+            <app-page-unavailable></app-page-unavailable>
+        </ng-container>
+
+    </div>
+
+    <div class="prev_next_nav">
+        <div class="strelka">←</div>
+        <div class="active">1</div>
+        <div class="non_active">2</div>
+        <div class="non_active">3</div>
+        <div class="dot" >...</div>
+        <div class="non_active">7</div>
+        <div class="non_active">8</div>
+        <div class="non_active">9</div>
+        <div class="strelka">→</div>
+    </div>
+</main>
+

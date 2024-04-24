@@ -1,0 +1,91 @@
+<ng-container *ngIf="logged">
+  <header>
+      <div class="left_side">
+          <p class="logo_ml" [routerLink]="['about/']">MLforces</p>
+          <img src="../assets/vector1.svg" alt="divider">
+          <p [ngClass]="{'active': activeMenuItem === 'home', 'nonactive': activeMenuItem !== 'home'}" (click)="setActive('home')" [routerLink]="['/home']">Home</p>
+          <p [ngClass]="{'active': activeMenuItem === 'textbook', 'nonactive': activeMenuItem !== 'textbook'}" (click)="setActive('textbook')" >Textbook</p>
+          <p [ngClass]="{'active': activeMenuItem === 'statistics', 'nonactive': activeMenuItem !== 'statistics'}" (click)="setActive('statistics')" [routerLink]="['/statistics']">Statistics</p>
+          <p [ngClass]="{'active': activeMenuItem === 'tasks', 'nonactive': activeMenuItem !== 'tasks'}" (click)="setActive('tasks')" [routerLink]="['tasks']">
+              Tasks
+              <img src="../assets/expand.svg" alt="">
+          </p>
+      </div>
+    
+      <div class="right_side" *ngIf="logged">
+          <div class="profile">
+              <div class="icon_profile">E</div>
+              <div class="user_name">Erkebulan</div>
+          </div>
+          <div class="sign_out" (click)="logout()">
+              Sign Out →
+          </div>
+      </div>
+
+      <!-- <div class="right_side" *ngIf="logged">
+          <div class="login_to">Login →</div>
+          <div class="sign_up_to" >Sign Up</div>
+      </div> -->
+
+    </header> 
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+</ng-container>
+
+
+<ng-container *ngIf="!logged" >
+  
+  <div class="main_page">
+      <div class="orange_side">
+          <p class="logo">MLforces</p>
+          <img src="../../assets/saly.svg" class="first_img" alt="">
+      </div>
+      <div class="white_side">
+          <img src="../../assets/saly2.svg" class="second_img" alt="">
+      </div>
+  </div>
+  
+  <div class="forma">
+      <div class="forma_top">
+          <div class="title_sign">
+              <div class="title">Welcome to MLforces</div>
+              <div class="sign_in">Sign in</div>
+          </div>
+          <div class="no_acc_sign">No Account ?
+              <span class="sign_span">Sign up</span></div>
+      </div>
+  
+      <div class="divka">
+          <div class="username">
+              <p class="enter_your">Enter your username or email address</p>
+              <input class="input_enter" type="text" placeholder="Username or email address" name="username" [(ngModel)]="username">
+          </div>
+      
+          <div class="password">
+              <p class="enter_your">Enter your Password</p>
+              <input class="input_enter" [type]="showPassword ? 'text' : 'password'" placeholder="Password" name="password" [(ngModel)]="password">
+              <img src="../../assets/eye.svg" alt="" class="eye_img" (click)="togglePasswordVisibility()">
+          </div>
+      
+          <div class="forgot">Forgot Password</div>
+      </div>
+  
+      <button class="sign_btn" (click)="login()">Sign in</button>
+  
+      <div class="div_or">OR</div>
+  
+      <div class="link_soc">
+          <div class="google_div">
+              <img src="../../assets/google.svg" alt="">
+              <div>Sign in with Google</div>
+          </div>
+          <div class="icon"><img src="../../assets/Facebook.svg" alt=""></div>
+          <div class="icon"><img src="../../assets/apple.svg" alt=""></div>
+      </div>
+  
+  </div>
+
+</ng-container>
+
+
+

@@ -1,0 +1,11 @@
+
+<div class="modal" *ngIf="isOpen" (click)="toggle()">
+    <div class="option" [ngClass]="{'non_active': !isOptionOneSelected}" (click)="toggleOption(1); $event.stopPropagation()">
+        <img [src]="isOptionOneSelected ? '../../assets/checkbox.svg' : '../../assets/checkbox1.svg'" alt="">
+        <p>Show tasks in a list</p>
+    </div>
+    <div class="option" [ngClass]="{'non_active': !isOptionTwoSelected}" (click)="toggleOption(2); $event.stopPropagation()">
+        <img [src]="isOptionTwoSelected ? '../../assets/checkbox.svg' : '../../assets/checkbox1.svg'" alt="">
+        <p>Sorting by end date</p>
+    </div>
+</div>

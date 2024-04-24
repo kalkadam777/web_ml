@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Dela Gothic One';
+    src: url('DelaGothicOne-Regular.eot');
+    src: local('Dela Gothic One Regular'), local('DelaGothicOne-Regular'),
+        url('DelaGothicOne-Regular.eot?#iefix') format('embedded-opentype'),
+        url('DelaGothicOne-Regular.woff2') format('woff2'),
+        url('DelaGothicOne-Regular.woff') format('woff'),
+        url('DelaGothicOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

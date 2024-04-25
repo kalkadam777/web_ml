@@ -1,0 +1,26 @@
+<div class="d-flex justify-content-between" >
+  <div class="container mt-3" >
+    <h2>Comments Section</h2>
+    <div *ngFor="let comment of comments" class="card mb-3 shadow-sm" style="max-width: 740px;">
+      <div class="card-header bg-primary text-white">
+        Task {{ comment.task }} Comment
+      </div>
+      <div class="card-body bg-light">
+        <h5 class="card-title">User {{ comment.user_id }}</h5>
+        <p class="card-text">{{ comment.content }}</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <small class="text-muted">{{ comment.votes}} votes</small>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  <!-- Кнопка, расположенная справа -->
+  <div class="d-flex align-items-center me-5" data-bs-toggle="modal" data-bs-target="#solutionSubmitModal">
+    <button class="btn btn-lg btn-outline-primary ">Comment</button>
+  </div>
+</div>
+
+<app-comment-submit-modal [taskId]="comments[0].task"></app-comment-submit-modal>

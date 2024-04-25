@@ -1,0 +1,29 @@
+
+<div class="modal fade" id="solutionSubmitModal" #solutionModal tabindex="-1" aria-labelledby="solutionSubmitModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="solutionSubmitModalLabel">Submit Comment</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="solutionText" class="form-label">Comment</label>
+              <textarea class="form-control" id="solutionText" rows="3" name="solutionText" [(ngModel)]="commentText.content"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="points">Votes</label>
+                <input type="number" class="form-control" id="votes" [(ngModel)]="commentText.votes" name="votes" required>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="submitSolution()">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

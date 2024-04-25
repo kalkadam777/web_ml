@@ -1,0 +1,76 @@
+
+@import url("../../font/stylesheet.css");
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--Primaty-Grey-Light, #F6F5F4);
+    padding: 100px 128px;
+    gap: 40px;
+    /* align-self: stretch; */
+}
+
+.first_user {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 800px;
+    padding: 40px;
+    align-items: center;
+    border-radius: 14px;
+    background: #FFF;
+    box-shadow: 0px 22.898px 45.796px -11.449px rgba(52, 41, 39, 0.08);
+}
+
+.about_user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+}
+
+.user_name {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+}
+
+.user_info {
+    color: var(--Primaty-Grey-Dark, #757575);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 22.4px */
+    letter-spacing: -0.64px;
+    align-self: stretch;
+    width: 490px;
+}
+
+.user {
+    color: var(--Primaty-Black, #000);
+    font-family: "Dela Gothic One";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 32px */
+    letter-spacing: -1.28px;
+}
+
+.git {
+    display: flex;
+    padding: 4px 8px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 6px;
+    background: var(--Primaty-Cyan-Dark, #2B788B);
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 16.8px */
+    letter-spacing: -0.48px;
+}

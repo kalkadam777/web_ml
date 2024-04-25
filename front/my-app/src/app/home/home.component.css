@@ -1,0 +1,226 @@
+.main_content {
+    display: flex;
+    padding: 75px 270px 40px 270px;
+    align-items: center;
+    height: 600px;
+    background: var(--Primaty-Grey-Light, #F6F5F4);
+    /* justify-content: center; */
+}
+
+.left_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* .right_content {
+    position: absolute;
+    left: 770px;
+    top: 200px;
+    width: 833px;
+} */
+
+.div_text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.img_boy {
+    position: absolute;
+    left: 770px;
+    top: 200px;
+    width: 833px;
+}
+
+.title {
+    color: var(--Primaty-Cyan-Dark, #2B788B);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 16px */
+    letter-spacing: 2.24px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.main_title {
+    color: var(--Primaty-Black, #000);
+    width: 531px;
+    margin-bottom: 30px;
+    font-family: "Dela Gothic One";
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 67.2px */
+    letter-spacing: -2.24px;
+}
+
+.mini_text {
+    color: var(--Primaty-Grey-Dark, #757575);
+    width: 396.886px;
+    margin-bottom: 32px;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 25.2px */
+    letter-spacing: -0.72px;
+}
+
+.btn_about {
+    display: flex;
+    padding: 14px 22px;
+    justify-content: center;
+    align-items: center;
+    gap: 19px;
+    color: #2B788B;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 16px */
+    letter-spacing: -0.64px;
+    border-radius: 100px;
+    border: none;
+    width: 165px;
+    background: var(--Primaty-Cyan-Light, #C3DCE3);
+    margin-bottom: 48.78px;
+    transition: background-color 0.3s;
+}
+
+.btn_about:hover {
+    border-radius: 100px;
+    background: var(--Primaty-Cyan-Dark, #2B788B);
+    color: #FFF;
+}
+
+.count_info {
+    display: flex;
+    flex-direction: row;
+    gap: 48.777px;
+}
+
+.popular_words {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.count {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.digit {
+    color: #000;
+    font-family: "Dela Gothic One";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 40px */
+    letter-spacing: -0.8px;
+}
+
+.plus {
+    color: #2B788B;
+    font-family: "Dela Gothic One";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -0.8px;
+}
+
+.img_and_text {
+    margin-top: 77.5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+}
+
+.textbook {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25.54px;
+    background: var(--Primaty-Grey-Light, #F6F5F4);
+    padding: 26.027px 270px 0px 370px;
+}
+
+
+.text_btn {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+}
+
+.title_and_miniText {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.inc_text {
+    color: var(--Primaty-Black, #000);
+    font-family: "Dela Gothic One";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 48px */
+    letter-spacing: -1.92px;
+    width: 474.464px;
+}
+
+.mini_inc_text {
+    color: var(--Primaty-Grey-Dark, #757575);
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 25.2px */
+    width: 396.886px;
+    letter-spacing: -0.72px;
+}
+
+.btn_textbook {
+    display: flex;
+    padding: 14px 22px;
+    justify-content: center;
+    align-items: center;
+    gap: 19px;
+    border-radius: 100px;
+    border: none;
+    background: var(--Primaty-Cyan-Light, #C3DCE3);
+    color: #2B788B;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 16px */
+    letter-spacing: -0.64px;
+    width: 131px;
+    transition: background-color 0.3s;
+}
+
+.btn_textbook:hover {
+    border-radius: 100px;
+    background: var(--Primaty-Cyan-Dark, #2B788B);
+    color: #FFF;
+}
+
+.statistics {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: #FFF;
+    padding: 26.027px 270px 95px 370px;
+}
